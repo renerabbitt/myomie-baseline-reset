@@ -178,6 +178,8 @@ footer { display: grid; grid-template-columns: 1fr auto; gap: 22px 40px; margin:
 footer nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 18px; }
 footer a { color: var(--navy-soft); text-decoration: none; font-size: 11px; font-weight: 750; }
 footer a:hover { text-decoration: underline; }
+footer .social-link { display: inline-flex; align-items: center; gap: 6px; }
+footer .social-link img { width: 18px; height: 18px; object-fit: contain; border-radius: 50%; }
 footer > p { grid-column: 1 / -1; margin: 0; font-size: 9px; letter-spacing: .08em; }
 .scrim { position: fixed; inset: 70px 0 0; z-index: 35; background: rgba(24,35,61,.22); backdrop-filter: blur(2px); }
 
