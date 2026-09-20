@@ -40,7 +40,7 @@ main,footer{position:relative;z-index:1}
 @media(prefers-reduced-motion:reduce){.botanical-backdrop{animation:none}.motion-enabled .scroll-reveal:not(.is-revealed) img,.motion-enabled .photo-card img,.motion-enabled .gallery button img,.motion-enabled .journal-photo img,.motion-enabled .about figure img{transform:none;transition:none}}
 
 /* A more visible, continuously drifting botanical layer. */
-.botanical-backdrop{opacity:.105;inset:-16%;animation:leaf-drift-visible 18s ease-in-out infinite alternate;will-change:transform}
+.botanical-backdrop{opacity:.15;inset:-16%;animation:leaf-drift-visible 18s ease-in-out infinite alternate;will-change:transform}
 @keyframes leaf-drift-visible{from{transform:translate3d(-4%,2%,0) scale(1.03) rotate(-2deg)}to{transform:translate3d(4%,-3%,0) scale(1.16) rotate(2deg)}}
 header{background:rgba(186,162,139,.82);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
 @media(prefers-reduced-motion:reduce){.botanical-backdrop{animation:none;will-change:auto}}
