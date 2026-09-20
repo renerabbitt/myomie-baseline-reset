@@ -58,3 +58,8 @@ html{scroll-padding-top:135px}
 .hero-photo{object-position:65% 25%;top:45px;height:calc(100% - 45px)}
 .motion-enabled .hero-photo{transform:translate3d(0,var(--hero-drift,0px),0) scale(1.02);transform-origin:center top}
 @media(max-width:600px){.hero-photo{object-position:61% 20%;top:30px;height:calc(100% - 30px)}}
+
+/* Outpainted headroom fills the hero continuously, including during drift. */
+.hero-photo{top:-120px;height:calc(100% + 120px);object-position:65% center}
+@media(max-width:600px){.hero-photo{top:-100px;height:calc(100% + 100px);object-position:61% center}}
+.hero-photo{mask-image:linear-gradient(to right,transparent,black 24%);-webkit-mask-image:linear-gradient(to right,transparent,black 24%)}
