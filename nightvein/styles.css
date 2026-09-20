@@ -17,3 +17,24 @@ footer p,footer>span{color:#596052}
 .motion-enabled .scroll-reveal{opacity:0;transform:translateY(28px);transition:opacity .85s ease var(--reveal-delay,0ms),transform .85s cubic-bezier(.2,.65,.3,1) var(--reveal-delay,0ms)}
 .motion-enabled .scroll-reveal.is-revealed,.motion-enabled .scroll-reveal:focus-within{opacity:1;transform:translateY(0)}
 @media(prefers-reduced-motion:reduce){.reading-progress{display:none}.motion-enabled .hero-photo{transform:none;will-change:auto}.motion-enabled .scroll-reveal{opacity:1;transform:none;transition:none}}
+
+/* Gold bookends, generous navigation, and botanical depth. */
+header,footer{background:#baa28b;color:#211722;border-color:#a18a74}
+header{position:relative;z-index:2;min-height:112px;height:auto;padding-top:22px;padding-bottom:22px}
+header .wordmark{font-size:36px;font-weight:600;letter-spacing:3px;color:#211722}
+header .wordmark span{font-size:11px;letter-spacing:5px;color:#211722}
+header nav{font-size:16px;font-weight:600;gap:30px}
+header nav a:hover{color:#000;text-decoration:underline;text-underline-offset:6px}
+header .nav-social{border-color:#806b59}
+footer .wordmark{color:#211722;font-weight:600}
+footer p,footer>span{color:#302431;font-size:12px}
+main,footer{position:relative;z-index:1}
+.botanical-backdrop{position:fixed;inset:-10%;z-index:0;pointer-events:none;overflow:hidden;opacity:.045;background-image:url('assets/dsc_0171.webp');background-size:cover;background-position:center;filter:grayscale(1);animation:leaf-drift 38s ease-in-out infinite alternate}
+@keyframes leaf-drift{from{transform:translate3d(-1%,0,0) scale(1.04) rotate(-1deg)}to{transform:translate3d(2%,-2%,0) scale(1.12) rotate(1deg)}}
+.motion-enabled .photo-card img,.motion-enabled .gallery button img,.motion-enabled .journal-photo img,.motion-enabled .about figure img{transform:scale(1);transition:transform 1.3s cubic-bezier(.2,.65,.3,1)}
+.motion-enabled .scroll-reveal:not(.is-revealed) img{transform:scale(1.13)}
+.journal-photo,.about figure{overflow:hidden}
+@media(hover:hover){.motion-enabled .photo-card:hover img,.motion-enabled .gallery button:hover img{transform:scale(1.055);transition-duration:.6s}}
+@media(max-width:900px){header nav{font-size:14px;gap:20px}header .wordmark{font-size:31px}}
+@media(max-width:600px){header{padding:24px 15px 20px}header nav{font-size:13px;gap:22px}header .wordmark{font-size:34px}header .wordmark span{font-size:11px}footer p,footer>span{font-size:12px}.botanical-backdrop{background-position:65% center}}
+@media(prefers-reduced-motion:reduce){.botanical-backdrop{animation:none}.motion-enabled .scroll-reveal:not(.is-revealed) img,.motion-enabled .photo-card img,.motion-enabled .gallery button img,.motion-enabled .journal-photo img,.motion-enabled .about figure img{transform:none;transition:none}}

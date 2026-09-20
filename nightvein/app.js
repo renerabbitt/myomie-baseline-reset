@@ -62,3 +62,8 @@ window.addEventListener('scroll', scheduleScrollMotion, {passive:true});
 window.addEventListener('resize', scheduleScrollMotion, {passive:true});
 motionPreference.addEventListener('change', configureMotion);
 configureMotion();
+
+const botanicalBackdrop = document.createElement('div');
+botanicalBackdrop.className = 'botanical-backdrop';
+botanicalBackdrop.setAttribute('aria-hidden', 'true');
+document.body.prepend(botanicalBackdrop);
