@@ -10,3 +10,10 @@ header .wordmark,footer .wordmark{color:#76614d}
 header nav a:hover{color:#76614d}
 header .nav-social{border-color:#d8d4c9}
 footer p,footer>span{color:#596052}
+
+/* Quiet, scroll-led movement; no scroll hijacking. */
+.reading-progress{position:fixed;top:0;left:0;right:0;height:3px;background:var(--gold);z-index:20;transform:scaleX(0);transform-origin:left;pointer-events:none}
+.motion-enabled .hero-photo{transform:translate3d(0,var(--hero-drift,0px),0) scale(1.10);transform-origin:center;will-change:transform}
+.motion-enabled .scroll-reveal{opacity:0;transform:translateY(28px);transition:opacity .85s ease var(--reveal-delay,0ms),transform .85s cubic-bezier(.2,.65,.3,1) var(--reveal-delay,0ms)}
+.motion-enabled .scroll-reveal.is-revealed,.motion-enabled .scroll-reveal:focus-within{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.reading-progress{display:none}.motion-enabled .hero-photo{transform:none;will-change:auto}.motion-enabled .scroll-reveal{opacity:1;transform:none;transition:none}}
