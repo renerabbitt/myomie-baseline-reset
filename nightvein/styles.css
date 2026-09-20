@@ -63,3 +63,9 @@ html{scroll-padding-top:135px}
 .hero-photo{top:-120px;height:calc(100% + 120px);object-position:65% center}
 @media(max-width:600px){.hero-photo{top:-100px;height:calc(100% + 100px);object-position:61% center}}
 .hero-photo{mask-image:linear-gradient(to right,transparent,black 24%);-webkit-mask-image:linear-gradient(to right,transparent,black 24%)}
+
+/* Broad feathering removes the photographic left boundary. */
+.hero-photo{width:85%;mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.08) 12%,rgba(0,0,0,.45) 28%,black 52%);-webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.08) 12%,rgba(0,0,0,.45) 28%,black 52%)}
+.journal-photo img{height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center 48%}
+#story article>img{height:auto;max-height:600px;object-fit:contain}
+@media(max-width:600px){.hero-photo{width:100%;mask-image:linear-gradient(to right,transparent,black 35%);-webkit-mask-image:linear-gradient(to right,transparent,black 35%)}}
